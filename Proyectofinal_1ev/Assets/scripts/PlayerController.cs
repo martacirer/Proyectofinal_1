@@ -14,11 +14,14 @@ public class PlayerController : MonoBehaviour
     private float zmax = 200f;
 
     public GameObject proyectil;
+    private int TotalMonedas = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        //posición incial
+        transform.position = new Vector3(0, 100, 0);
+        Debug.Log(TotalMonedas);
     }
 
     // Update is called once per frame
@@ -37,6 +40,7 @@ public class PlayerController : MonoBehaviour
         //Rotación
         transform.Rotate(Vector3.up, turnSpeed * Time.deltaTime * horizontalInput);
 
+        // barreras
         if(transform.position.x > xmax)
         {
             transform.position = new Vector3(xmax, transform.position.y, transform.position.z);
@@ -70,5 +74,14 @@ public class PlayerController : MonoBehaviour
         }
 
                 
+    }
+    private void OnTriggerEnter(Collider otherCollider)
+    {
+        if (otherCollider.gameObject.CompareTag("moneda"))
+        {
+            TotalMonedas += 1;
+            Destroy(otherCollider.gameObject);
+            Debug.Log($"Tienes {TotalMonedas} monedas");
+        }
     }
 }
