@@ -13,8 +13,12 @@ public class DetectCollision : MonoBehaviour
             Debug.Log($"GAME OVER");
             Time.timeScale = 0;
         }
-        
+        if (gameObject.CompareTag("Obstacle") && otherCollider.gameObject.CompareTag("proyectil"))
+        {
+            Destroy(otherCollider.gameObject);
+            Destroy(gameObject);
+        }
 
-        
+
     }
 }

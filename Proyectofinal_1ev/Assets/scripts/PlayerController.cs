@@ -82,6 +82,11 @@ public class PlayerController : MonoBehaviour
             TotalMonedas += 1;
             Destroy(otherCollider.gameObject);
             Debug.Log($"Tienes {TotalMonedas} monedas");
+            if(TotalMonedas == 10)
+            {
+                Time.timeScale = 0;
+                Debug.Log("HAS GANADO");
+            }
         }
     }
 }

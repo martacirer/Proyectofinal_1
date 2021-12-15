@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6556203112302444203}
   - component: {fileID: 3073282347768007306}
   - component: {fileID: -2674494437968739796}
+  - component: {fileID: 8876496338259721802}
   m_Layer: 0
   m_Name: moneda 1
   m_TagString: moneda
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 4786432534524791751}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.4791436, y: -1.6831435, z: 5.1721563}
-  m_LocalScale: {x: -0.023308102, y: 1.0597, z: 1.0597}
+  m_LocalScale: {x: -0.08139189, y: 3.7004726, z: 3.7004726}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -109,3 +110,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnSpeed: 40
+--- !u!114 &8876496338259721802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4786432534524791751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be45ff36a252fdd4680bd8ad1e1565db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
